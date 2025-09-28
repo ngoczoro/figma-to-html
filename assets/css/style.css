@@ -9,4 +9,90 @@ html {
 /*khôi phục lại cỡ chữ mặc định theo rem*/
 body {
   font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+
+/*==========================================================*/
+.header {
+  background: #fffcf4;
+}
+
+.header.fixed {
+  position: sticky; /*bám dính header không bị ăn màu nên khi cuộn*/
+  top: -28px; /* muốn neo 8px nên lấy .header .body 36px - 28px = 8px*/
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-content {
+  width: 1170px;
+  max-width: calc(100% - 48px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  display: inline-block;
+  min-width: 118px; /*chiều dài tối thiểu của nút bấm*/
+  padding: 0 16px; /*dài 16px thêm text thì tự dãn ra*/
+  line-height: 50px; /*chiều cao nút bấm*/
+  color: #fff;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 24.5px;
+  background: #171100;
+}
+
+/*==========================================================*/
+
+.header .body {
+  display: flex; /*3 yếu tố nằm ngang ra*/
+  align-items: center; /*căn 3 yếu tố nằm ngang nhau*/
+  padding: 36px 0 8px; /*neo header sợ dính phần từ dưới nên căn dưới 8px thôi để khi kéo ko ăn nd*/
+}
+
+/*do nav kéo theo cả khúc sau*/
+.nav {
+  margin-left: auto;
+}
+
+.nav ul {
+  display: flex;
+}
+
+.nav a {
+  color: #5f5b53;
+  font-size: 1.6rem;
+  padding: 8px 21px; /*21+21 = 42*/
+  position: relative;
+}
+
+.nav li.active,
+.nav a:hover {
+  color: #171100;
+  /* font-weight: 600; bị nhảy text khó chịu*/
+  text-shadow: 1px 0 0 currentColor;
+}
+
+.nav li.active a::after {
+  display: block;
+  left: 21px; /*do ở trên padding 21px nên phải kéo gạch chân qua*/
+  bottom: 6px;
+  content: "";
+  width: 12px;
+  height: 2px;
+  border-radius: 1px;
+  background: #171100;
+  position: absolute;
+}
+
+.header.btn-sign-up {
+  min-width: 144px;
+}
+
+.header .action {
+  margin-left: 49px; /*cách 70px nhưng đã padding 21px rùi*/
 }
