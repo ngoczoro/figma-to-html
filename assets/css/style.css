@@ -12,6 +12,11 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+:root {
+  --font-heading: "Sen", sans-serif;
+  --primary-color: #ffb900;
+}
+
 /*==========================================================*/
 .header {
   background: #fffcf4;
@@ -20,6 +25,7 @@ body {
 .header.fixed {
   position: sticky; /*bám dính header không bị ăn màu nên khi cuộn*/
   top: -28px; /* muốn neo 8px nên lấy .header .body 36px - 28px = 8px*/
+  z-index: 1; /*để logo đừng nhảy lên ảnh*/
 }
 
 a {
@@ -46,6 +52,9 @@ a {
   background: #171100;
 }
 
+.btn:hover {
+  opacity: 0.9; /*mờ đi 1 chút*/
+}
 /*==========================================================*/
 
 .header .body {
@@ -95,4 +104,179 @@ a {
 
 .header .action {
   margin-left: 49px; /*cách 70px nhưng đã padding 21px rùi*/
+}
+
+/*===================hero============================*/
+.hero {
+  /* margin-top: 57px; 65px - 8px nãy căn */
+  padding: 57px 0 64px;
+  background-color: #fffcf4;
+}
+.hero .body {
+  display: flex; /*dàn 2 khối media với content tách nhau ra*/
+}
+
+/*==========hero left==============*/
+.hero .media-block {
+  width: 48%; /*media-block/main-content = 570/1170*/
+  position: relative; /*cho content-block đè lên */
+}
+
+/*==========hero right==============*/
+.hero .content-block {
+  width: 52%;
+  padding-left: 130px;
+  padding-top: 46px; /*197px-151px: khoảng cách content đến hero*/
+}
+
+/*có đổi ảnh phải định dạng theo hình
+trong project figma*/
+.hero .media-block .img {
+  width: 470px;
+  height: 685px;
+  object-fit: cover; /*tránh vỡ ảnh*/
+  border-radius: 20px;
+}
+
+.hero .hero-summary {
+  padding: 24px;
+  position: absolute; /*cho content-block định dạng trên media-block */
+  bottom: 48px;
+  right: 0;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.05);
+  width: 270px;
+}
+
+.hero-summary .item {
+  display: flex;
+  align-items: center;
+}
+
+/*item mà có nằm sau 1 item mới dãn phía trên*/
+.hero-summary .item + .item {
+  margin-top: 22px;
+}
+
+.hero-summary .icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  /*căn giữa icon vs vòng tròn*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*-------------------------*/
+  background-color: #fff9e8;
+}
+
+.hero-summary .icon2 {
+  background-color: #fcefff;
+}
+
+.hero-summary .icon3 {
+  background-color: #ebeaff;
+}
+
+.hero-summary .info {
+  margin-left: 16px;
+}
+
+.hero-summary .label {
+  color: #5f5b53;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 186%; /* 185.714% */
+}
+
+.hero-summary .title {
+  color: #171100;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 167%; /* 166.667% */
+}
+
+.hero .heading {
+  color: #171100;
+  font-family: var(--font-heading);
+  font-size: 5.8rem;
+  font-weight: 700;
+  line-height: 117%; /* 117.241% */
+  letter-spacing: -1.16px;
+}
+
+.hero .desc {
+  color: #5f5b53;
+  font-family: Poppins;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 167%; /* 166.667% */
+  margin-top: 28px;
+}
+
+.hero .cta-group {
+  margin-top: 38px;
+  align-items: center; /*căn gữa button watch video*/
+  display: flex;
+}
+
+.btn-seecourses {
+  background: var(--primary-color);
+  min-width: 180px;
+  line-height: 64px;
+  border-radius: 32px;
+}
+
+.hero .watch-video {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  padding-left: 28px;
+  align-items: center; /*căn giữa nút play và text*/
+  cursor: pointer;
+}
+
+.hero .watch-video .icon {
+  /*căn giữa icon vs vòng tròn*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*-------------------------*/
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background: #fff;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.07);
+}
+
+.hero .watch-video span {
+  padding-left: 14px;
+  color: #171100;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 167%; /* 166.667% */
+}
+
+.hero .recent {
+  margin-top: 48px;
+}
+
+.hero .start strong {
+  margin-right: 15px; /*đếm khoảng cách giữa số và chữ*/
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 4.4rem;
+  line-height: 54px;
+  letter-spacing: 0%;
+}
+
+.hero .start strong:nth-child(2) {
+  /*strong t2*/
+  margin-left: 28px;
+}
+
+.hero .start {
+  margin-top: 8px;
 }
