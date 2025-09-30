@@ -106,6 +106,15 @@ a {
   margin-left: 49px; /*cách 70px nhưng đã padding 21px rùi*/
 }
 
+.heading-lv2 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 3.8rem;
+  line-height: 126%; /* 126.316% */
+  letter-spacing: -0.76px;
+}
+
 /*===================hero============================*/
 .hero {
   /* margin-top: 57px; 65px - 8px nãy căn */
@@ -279,4 +288,51 @@ trong project figma*/
 
 .hero .start {
   margin-top: 8px;
+}
+
+/*popular*/
+.popular {
+  padding: 65px 0; /*đặt trên dưới 65px cho nếu có đổ màu nên ko dính chữ*/
+  margin-top: 135px; /*200px-65=135px cách trên*/
+}
+
+.popular-top .desc {
+  margin-top: 16px;
+  width: 458px;
+  color: #5f5b53;
+  font-family: Poppins;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 167%; /* 166.667% */
+}
+
+.popular-top {
+  display: flex;
+  justify-content: space-between; /*khối trái và khối phải kịch về 2 phía*/
+  align-items: center; /*căn nút giữa 2 text*/
+}
+
+.popular-top .controls {
+  display: flex;
+  gap: 18px; /*khoảng cách giữa 2 btn-control*/
+}
+
+.popular-top .btn-control {
+  background-color: transparent;
+  /*căn giữa icon vs vòng tròn*/
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+/*khi rê chuột vào đổi màu 2 button*/
+.popular-top .btn-control:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+  cursor: pointer;
 }
