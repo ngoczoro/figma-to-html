@@ -513,3 +513,55 @@ trong project figma*/
   overflow: hidden; /*ẩn các item còn lại*/
   width: 100%;
 }
+
+/*=====================features======================*/
+.features {
+  /*135+65 =200px*/
+  margin-top: 135px;
+  padding-top: 65px; /*thêm padding để nếu ssau này có thêm nền đừng sát nội dung*/
+}
+
+.features .body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.features .images {
+  display: flex;
+  gap: 30px;
+}
+
+.features .images img {
+  width: 270px;
+  height: 404px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.features .images .lower {
+  margin-top: 34px; /*200+34=234px*/
+}
+
+.features .content {
+  width: 41%; /*470/1170=0.401*/
+  /*căn giữa cả khối content để nd chỉ nằm giữa*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.features .content .decs {
+  margin-top: 16px;
+  color: #5f5b53;
+  font-family: Poppins;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 175%; /* 175% */
+}
+
+.features .btn.cta-btn {
+  width: 137px;
+  height: 50px;
+  margin-top: 32px;
+  background-color: var(--primary-color);
+}
