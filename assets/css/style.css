@@ -444,10 +444,6 @@ trong project figma*/
   background-color: #2e2100;
 }
 
-.feedback-item {
-  display: flex;
-}
-
 .avatar {
   width: 72px;
   height: 72px;
@@ -498,7 +494,6 @@ trong project figma*/
 }
 
 .feedback-item blockquote {
-  width: 740px;
   color: #fff;
   font-size: 2.6rem;
   font-style: italic;
@@ -507,5 +502,14 @@ trong project figma*/
 }
 
 .feedback .feedback-item {
+  width: 100%; /*để các phần tử item chỉ nằm trong 1 trang*/
+  display: flex;
   justify-content: space-between;
+  flex-shrink: 0; /*ko bị co*/
+}
+
+.feedback .feedback-list {
+  display: flex;
+  overflow: hidden; /*ẩn các item còn lại*/
+  width: 100%;
 }
