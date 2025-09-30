@@ -436,3 +436,76 @@ trong project figma*/
 .popular .course-item .btn-book:hover {
   background-color: var(--primary-color);
 }
+
+/*=================================feedback===============================*/
+.feedback {
+  margin-top: 135px; /*vì popular đã padding 65px nên 200 - 65 = 135px*/
+  padding: 96px 0; /*trên dưới 96px, trái phải đã lấy của main-content rồi nên ko cần padding*/
+  background-color: #2e2100;
+}
+
+.feedback-item {
+  display: flex;
+}
+
+.avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.feedback .info .member-name {
+  margin-top: 18px;
+  color: #f7f7f7;
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 142%; /* 141.667% */
+}
+
+.feedback .info .desc {
+  margin-top: 4px;
+  color: #bfbcb2;
+  font-family: Poppins;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 186%; /* 185.714% */
+}
+
+.feedback-item .dots {
+  display: flex;
+  margin-top: 28px;
+  gap: 6px; /*khoảng cách giữa các dấu chấm*/
+}
+
+.feedback-item .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #634700;
+  cursor: pointer;
+}
+
+/*màu cho nốt giữa*/
+.feedback-item .dot.active {
+  background-color: var(--primary-color);
+  cursor: default;
+}
+
+.feedback-item .content {
+  width: 66%; /* 770/1170 = 0.658*/
+}
+
+.feedback-item blockquote {
+  width: 740px;
+  color: #fff;
+  font-size: 2.6rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 154%; /* 153.846% */
+}
+
+.feedback .feedback-item {
+  justify-content: space-between;
+}
