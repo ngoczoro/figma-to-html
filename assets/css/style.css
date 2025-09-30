@@ -56,6 +56,23 @@ a {
   opacity: 0.9; /*mờ đi 1 chút*/
   cursor: pointer;
 }
+
+/*nếu header khóa học dài thì trong 1 hàng hiện ...*/
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+/*nếu header khóa học dài thì trong 2 hàng hiện ...*/
+.line-clamp.line-2 {
+  --line-clamp: 2;
+}
+
+/*tự ngắt xuống dòng nếu nội dụng ko có khoảng trắng*/
+.break-all {
+  word-break: break-all;
+}
 /*==========================================================*/
 
 .header .body {
@@ -350,6 +367,7 @@ trong project figma*/
 }
 
 .popular .course-item {
+  flex: 1; /*3 cột sẽ bằng nhau*/
   border-radius: 12px;
   border: 1px solid #e2dfda;
   background: #fff;
