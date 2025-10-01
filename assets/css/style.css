@@ -514,7 +514,7 @@ trong project figma*/
   width: 100%;
 }
 
-/*=====================features======================*/
+/*=====================features 1======================*/
 .features {
   /*135+65 =200px*/
   margin-top: 135px;
@@ -564,4 +564,24 @@ trong project figma*/
   height: 50px;
   margin-top: 32px;
   background-color: var(--primary-color);
+}
+
+/*=====================features 2======================*/
+.features2 {
+  /*cả 2 features đã padding 65px là 130px, mà features2 cách features 200px - 130px = 70px*/
+  margin-top: 70px;
+}
+.features2 .body {
+  flex-direction: row-reverse; /*đổi chiều */
+}
+
+.features2 .content {
+  /*570/1170=0.487*/
+  width: 49%;
+}
+
+.features2 .images img {
+  width: 470px;
+  height: 440px;
+  border-radius: 20px;
 }
