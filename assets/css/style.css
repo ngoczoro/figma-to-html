@@ -585,3 +585,134 @@ trong project figma*/
   height: 440px;
   border-radius: 20px;
 }
+
+/*=====================blogs======================*/
+.blogs {
+  margin-top: 135px;
+  padding: 96px 0;
+  background-color: #fffcf4;
+}
+
+.blogs .blog-list {
+  display: flex;
+  margin-top: 55px;
+  gap: 30px;
+  overflow: hidden; /*ẩn các item dư còn lại*/
+}
+
+.blogs .blog-top {
+  margin-top: 96px;
+  text-align: center;
+}
+
+.blogs .desc {
+  /*do giới hạn chiều dài nên bị thụt trong 448px phải dùng auto*/
+  margin: 16px auto 0;
+  color: #696262;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 175%; /* 175% */
+  width: 448px;
+}
+
+.blogs .item {
+  /*3 item nen chiem 33.33% do mỗi item cách nhau 30px mà có 3 item đang hiển thị nên
+  60px / 3px = 20px */
+  width: calc(33.33% - 20px);
+  height: 467px;
+  border-radius: 16px;
+  background: #fff;
+  flex-shrink: 0; /*ko bị co lại nếu thêm item*/
+}
+
+.blogs .item:hover {
+  box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.05);
+}
+
+.blogs .item .thumb {
+  /*giới hạn chiều dài bức ảnh nằm trong khung chứa mh */
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+}
+
+.blogs .item .info {
+  padding: 20px 20px 28px;
+}
+
+.blogs .date {
+  color: #5f5b53;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 186%; /* 185.714% */
+  /*before được hiểu là con của date, này để căn giữa hình tròn*/
+  display: inline-flex; /* cha chỉ chứa vừa nội dung*/
+  align-items: center;
+  position: relative; /*để gạch ngang xuống dòng*/
+  padding-bottom: 12px;
+}
+
+/*trước date là dấu chấm*/
+.blogs .date::before {
+  content: "";
+  margin-right: 4px;
+  display: inline-block; /*để xét được độ rộng*/
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+}
+
+/* sau date là dấu gạch phân chia*/
+.blogs .date::after {
+  content: "";
+  display: inline-block; /*để xét được độ rộng*/
+  left: 0;
+  bottom: 0;
+  /*độ rộng của h3 là 160 của gạch là 133 cách nhau 27px, nếu muốn gạch dài theo text cần xét right*/
+  right: -27px;
+  height: 1px;
+  border-radius: 0.5px;
+  background: #e2dfda;
+  position: absolute; /*để gạch ngang xuống dòng do đã display:flex ở cha*/
+}
+
+.blogs .item .title {
+  margin-top: 12px;
+  color: #171100;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 175%;
+}
+
+.blogs .item .btn {
+  margin-top: 12px;
+  font-size: 1.4rem;
+}
+
+.blogs .item .btn:hover {
+  background-color: var(--primary-color);
+}
+
+.blogs .dots {
+  display: flex;
+  /*căn giữa 3 châm*/
+  justify-content: center;
+  gap: 6px;
+  margin-top: 38px;
+}
+
+.blogs .dots .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #5f5b53;
+  cursor: pointer;
+}
+
+.blogs .dot.active {
+  background-color: var(--primary-color);
+  cursor: default;
+}
