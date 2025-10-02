@@ -716,3 +716,85 @@ trong project figma*/
   background-color: var(--primary-color);
   cursor: default;
 }
+
+/*================================footer============================*/
+footer {
+  background-color: #2e2100;
+  padding: 96px 135px 0;
+}
+
+.footer .row {
+  display: flex;
+  /*thêm phần dưới dấu gạch và dưới dấu gạch của footer*/
+  padding-bottom: 38px;
+  border-bottom: 1px solid #59554b;
+}
+
+.footer .row .column {
+  width: 21.6%; /* (100-35%)/3 phan tu còn lại thì 21.6%*/
+}
+/*cột đầu tiên*/
+.footer .row .column:first-child {
+  width: 35%; /*nd 267 + khoảng cách 145 = 412/1170*/
+}
+
+.footer .desc {
+  margin-top: 18px;
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 186%; /* 185.714% */
+  max-width: 267px; /*cho néu thu nhỏ trình duyệt có thể co theo*/
+}
+
+.footer .socials {
+  display: flex;
+  margin-top: 18px;
+  gap: 18px;
+}
+
+.footer .title {
+  padding-bottom: 14px;
+  padding-right: 48px; /*132px dai gach -82px dai title*/
+  border-bottom: 1px solid #59554b; /*do ko có border-radius nên dùng được border để vẽ*/
+  display: inline-block; /*để đường gạch chỉ dài theo từng title*/
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 175%; /* 175% */
+}
+
+.footer .list {
+  margin-top: 28px;
+}
+
+.footer .list a {
+  /*bởi vì mặc định thẻ a là inline ko margin bottom vs margin top được*/
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 186%; /* 185.714% */
+}
+
+/*phan tu cuối ;ko thụt xuống*/
+.footer .list li:last-child a {
+  margin-bottom: 0;
+}
+
+.footer .list strong {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 186%; /* 185.714% */
+}
+
+.footer .copyright {
+  padding: 28px 0;
+  color: #807d74;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 186%; /* 185.714% */
+}
